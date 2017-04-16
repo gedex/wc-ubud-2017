@@ -1,0 +1,9 @@
+{
+	"url": "http://example.com",
+	"users": {
+		"admin": {
+			"username": "admin",
+			"password": "password"
+		}
+	}
+}

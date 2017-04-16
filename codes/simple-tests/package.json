@@ -1,0 +1,16 @@
+{
+  "name": "simple-tests",
+  "version": "1.0.0",
+  "description": "Simple e2e test demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "BABEL_ENV=commonjs mocha --compilers js:babel-register"
+  },
+  "author": "Akeda Bagus",
+  "license": "MIT",
+  "devDependencies": {
+    "config": "^1.25.1",
+    "mocha": "^3.2.0",
+    "selenium-webdriver": "^3.3.0"
+  }
+}
