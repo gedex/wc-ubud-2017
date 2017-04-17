@@ -3,7 +3,7 @@ End-to-end Test for WordPress
 
 Slides source for my talk at [WordCamp Ubud 2017](https://2017.ubud.wordcamp.org).
 
-Preview is available at http://gedex.web.id/wc-ubud-2016.
+Preview is available at http://gedex.web.id/wc-ubud-2017.
 
 ## Slides
 
