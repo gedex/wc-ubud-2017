@@ -5,5 +5,9 @@
 			"username": "admin",
 			"password": "password"
 		}
+	},
+	"timeout": {
+		"test": 30000,
+		"locateElement": 5000
 	}
 }
