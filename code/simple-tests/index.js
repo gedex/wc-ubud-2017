@@ -4,28 +4,28 @@ import config from 'config';
 import test from 'selenium-webdriver/testing';
 
 // Feature.
-test.describe( 'log in as a user', function() {
+test.describe( 'user log in', function() {
 	let driver;
 
 	this.timeout( config.get( 'timeout.test' ) );
 
-	test.before( function() {
+	test.before( () => {
 		driver = new Builder().forBrowser( 'chrome' ).build();
 	} );
 
-	test.after( function() {
+	test.after( () => {
 		driver.quit();
 	} );
 
-	// Scenario
-	test.describe( 'allows user login via wp-login.php page', function() {
-		// Given I visit http://example/wp-login.php
-		test.before( function() {
+	// Scenario.
+	test.describe( 'allows user log in via wp-login.php page', () => {
+		// Given log in page at /wp-login.php
+		test.before( () => {
 			driver.get( config.get( 'url' ) + '/wp-login.php' );
 		} );
 
-		// When I do some actions to log in
-		test.before( function() {
+		// When...
+		test.before( () => {
 			const username = config.get( 'users.admin.username' );
 			const password = config.get( 'users.admin.password' );
 			const timeout = config.get( 'timeout.locateElement' );
@@ -44,13 +44,13 @@ test.describe( 'log in as a user', function() {
 		} );
 
 		// Then...
-		test.it( 'redirects user to /wp-admin/', function() {
+		test.it( 'I redirected to /wp-admin/', () => {
 			const url = config.get( 'url' );
 			assert( driver.getCurrentUrl() ).equalTo( url + '/wp-admin/' );
 		} );
 
 		// ...And
-		test.it( 'displays "Dashboard" in the title', function() {
+		test.it( 'I see "Dashboard" in the title', () => {
 			assert( driver.getTitle() ).matches( /^Dashboard/ );
 		} );
 	} );
