@@ -9,7 +9,7 @@ Preview is available at http://gedex.web.id/wc-ubud-2016.
 
 Source of slides can be found in `slides/` directory. It uses markdown format.
 
-## Codes
+## Code
 
-Example codes can be found in `codes/` directory.
+Example code can be found in `code/` directory.
 
